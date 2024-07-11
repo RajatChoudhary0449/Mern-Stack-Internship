@@ -1,0 +1,45 @@
+Software which manages the files and folder for us
+Version Control System
+Distributed
+
+Local Centralized Distributed
+
+working directory---git add ---> staging area(temporary location) --- git commit ---> git folder
+
+git status-> will tell about the untracked files
+
+Will set a global username and email newnam
+$ git config --global user.name "abc"
+$ git config --global user.email "abc@gmail.com"
+git log
+
+$ git push -u origin main
+
+Assignment
+1) Branches in git
+2) Difference between push and pull command
+3) Difference between pull and fetch command
+
+git commit -m "Commit name" 
+
+git add . -> add all the file present in pwd
+
+git diff : To present the changes in staging area and current
+git diff --staged: To present the changes in staging area and commit
+
+git log --oneline
+git tag "versionname" sha code
+git push --tags
+
+git branch branchname: to create a branch
+git checkout branchname: to switch a branch
+git checkout -b branchname: to switch and create a branch
+git push origin branchname: to send to GitHub
+origin is name of connection
+git merge branchname: to get the data on our current branch
+
+alias creation:
+git config --global alias.lg "log --oneline --all --graph --decorate"
+now git lg can be used for log with all properties.
+git pull origin: 
+git clone https:.....-> It will pull that

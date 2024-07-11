@@ -1,0 +1,109 @@
+Create a database and use it: use newdb
+To create a collection: db.createCollection("Field value")
+To add data in a collection: 
+1) db.collectionname.insertOne({name: abc,type:"Static"});
+2) db.collectionname.insertMany([{},{},{}]);
+
+To check the collection: db.collectionname.find()
+inside find() object can be passed to filter the find.
+find({query},{projection})
+example: find({name:"abc",rollno: 123},{name:true})
+
+Data type:
+1) String
+2) int
+3) Double
+4) boolean (true,false)
+5) Date: new Date() can be used
+6) null
+7) Arrays
+8) Object
+
+To sort: db.collectionname.find().sort({fieldname:1 for increasing,-1 for decreasing})
+To limit:  db.collectionname.find().limit(number)
+method to use find to search for something start with char ch
+Starts with: db.user.find({/^ch/})
+Ending with: db.user.find({ch$/})
+In between: db.user.find({/ch/})
+
+To find whether array contains two element: db.user.find({skills:{"$all":["Python","Java"]}})
+
+To find whether it starts and end at a particular element: 
+Atlas atlas-11zwyo-shard-0 [primary] skit> db.user.find({role:"customer",username:{"$regex":"^A.*a$"}})
+
+Case Insensitive: db.user.find({role:"customer",username:{"$regex":"^A.*a$","$options":"i"}})
+
+Useremail does not contains @gmail.com: db.user.find({role:"admin",useremail:{$nin:[/@gmail.com/]}})
+
+Skills contains java but not python: db.user.find({skills: {$in:["Java"],$nin:["Python"]}})
+
+Aggregation:
+db.user.aggregation([{$match: {gender:"Female",city:"Jaipur"}}])
+
+To get the countofeach city:
+db.user.aggregate([
+  {
+    $group: {
+      _id:"$city" ,
+      countofcity:{$sum:1}
+    }
+  }
+])
+
+//customer->HTML but not CSS->avg,min,max
+[
+  {
+    $match: {
+      role:'customer',
+      skills:{$in:['HTML'],$nin:["CSS"]}
+    }
+  },{
+    $group:{
+      _id:null,
+      avgsalary:{$avg:"$salary"},
+      minsalary:{$min:"$salary"},
+      maxsalary:{$max:"$salary"},
+      count:{$sum:1}
+		}
+  }
+]
+
+
+$unwind is a pipeline stage that can be used to break an array 
+[
+  {
+    $unwind:"$skills"
+  },
+  {
+    $group:{
+      _id:"$skills",
+      cnt:{$sum:1}
+    }
+  }
+]
+ 
+$addfield is a pipeline stage that can be use to add a field in stages.
+To get individual users in each group we can use $push:$$ROOT
+[
+  {
+    $group:{
+      _id:"$lastName",
+      count:{$sum:1},
+      users:{$push:"$$ROOT"}
+		}
+  }
+]
+
+//group users by role and collect all unique skills for each role
+[
+  {
+    $unwind:"$skills"
+  },
+  {
+    $group:{
+      _id:"$role",
+      user:{$push:"$$ROOT"},
+      skill:{$addToSet:"$$ROOT.skills"}
+    }
+  }
+]
