@@ -434,22 +434,36 @@ OR
   }
 ]
 19)
-[  
+[
   {
-    $addFields: {
-      averagesal: {$avg:"$salary"}
+    $group: {
+      _id: null,
+      users:{$push:"$$ROOT"},
+    	avg:{$avg:"$salary"}
+    }
+  },
+  {
+    $unwind:"$users"
+  },
+  {
+    $project: {
+      gender:"$users.gender",
+      sal:"$users.salary",
+      salary:"$avg"
     }
   },
   {
     $match:{
-      salary:{$gt:"$averagesal"}
-    }
+      	$expr: {
+        $gt: ["$sal", "$salary"]
+      			}
+		}
   },
   {
     $group:{
       _id:"$gender",
-      users:{$sum:1}
-    }
+      count:{$sum:1}
+		}
   }
 ]
 20)
