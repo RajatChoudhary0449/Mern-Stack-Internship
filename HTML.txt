@@ -1,0 +1,71 @@
+Hyper Text Markup Language
+1) Structute/ Layout
+2) Markup Tag
+3) Client Side Language
+4) extension-> html, htm
+Extension shows the way to execute the files
+
+Types of tags:
+1) Opening tag
+2) Closing tag
+
+Useful tags:
+p
+ins: used to insert an underlined text
+del: used to insert an cut text
+sub: used for H2O
+sup: used for square(a2)
+small: used to decrease the font of intermediate text
+center: used to center the text
+abbr: Used for tool tip text
+marquee: Used for motion of the text
+img: Used to insert an image
+
+Attributes: Quality features of tags
+
+Three types of list:
+1) Unordered list: ul>li*5
+2) Ordered List: ol>li*5
+3) Data Defination Language: dl>dt,dd(Basically used for tables)
+dl->data list,
+dt->data term,
+dd->data description
+Type can be changed to use square or alphabet
+
+Here are the different input types you can use in HTML:
+
+<input type="button">
+<input type="checkbox">
+<input type="color">
+<input type="date">
+<input type="datetime-local">
+<input type="email">
+<input type="file">
+<input type="hidden">
+<input type="image">
+<input type="month">
+<input type="number">
+<input type="password">
+<input type="radio">
+<input type="range">
+<input type="reset">
+<input type="search">
+<input type="submit">
+<input type="tel">
+<input type="text">
+<input type="time">
+<input type="url">
+<input type="week">
+
+form attribute:
+action: action takes a function name to be executed using the form
+method have get, post
+get will be used when we had less data and security is not concerned
+post will be used in other cases
+
+name attribute in image is used in dereferencing while post
+req.post["name"]
+
+colspan can be used to span the field in a table to value columns
+
+span tag can be used to edit inline text
