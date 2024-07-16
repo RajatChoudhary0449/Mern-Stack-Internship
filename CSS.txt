@@ -1,0 +1,31 @@
+3 types of CSS:
+1) Inline (style attribute)
+2) Internal (style tag)
+3) External
+
+Drawback of inline:
+-> Repetation of text
+-> Readability
+-> 
+
+Types of selectors:
+1) class Selector
+2) ID selector
+3) Pseudo Selector
+4) Universal Selector(*)
+
+box-sizing: border-box-> This will avoid change in size.
+box-sizing: content-box-> This is default mode which changes the size on insertion of padding and margin.
+
+display and position:
+3 types of display:
+1) block-> will consume 100% width always.
+2) inline->will be dependant upon width, will disable height and width
+3) inline-block->will consider height and width and shift the content horizontally.
+
+.doc {
+            display: flex;
+            justify-content: center;//will put the content in between
+            align-items:center;//will put the horizontal and vertical space same
+        }
+flex_wrap:wrap; //will set the amount of containers in one line

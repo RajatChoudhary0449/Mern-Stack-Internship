@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .box {
+            height: 200px;
+            width: 200px;
+            background-color: red;
+            border: 2px solid black;
+            display: inline-block;
+        }
+
+        .doc {
+            display: flex;
+            /* justify-content: center; //will put the content in between */
+            /* align-items: center; //will put the horizontal and vertical space same */
+            flex-wrap: wrap; //will set the amount of containers in one line
+        }
+    </style>
+</head>
+
+<body>
+    <div class="doc">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>
