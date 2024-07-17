@@ -1,0 +1,47 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.main {
+    width: 100%;
+    background-color: #f1f2f6;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 50px;
+    /* background-color: red; */
+}
+
+.left {
+    margin-left: 268px;
+    width: 35%;
+    height: 80%;
+    padding: auto 30px;
+    color: rgb(28, 30, 33);
+
+}
+
+.right {
+    height: 80%;
+    width: 40%;
+}
+
+.top {
+    background-color: white;
+    height: 70%;
+}
+
+img {
+    height: 20%;
+    width: 80%;
+    position: relative;
+}
+
+p {
+    font-size: 28px;
+    font-weight: 400;
+    font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+}

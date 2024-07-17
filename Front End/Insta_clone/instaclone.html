@@ -27,7 +27,11 @@
             justify-content: center;
         }
 
-        .secbox {}
+        @media(max-width: 879px) {
+            .hidden {
+                display: none;
+            }
+        }
 
         .main {
             height: 100vh;
@@ -94,7 +98,7 @@
         .first {
             border: 1px solid rgb(219, 219, 219);
             padding: 20px;
-            height: 68%;
+            height: 70%;
         }
 
         .second {
@@ -110,6 +114,10 @@
             font-weight: bold;
         }
 
+        .secbox {
+            min-width: 300px;
+        }
+
         .sec {
             font-size: 16px;
             font-weight: normal;
@@ -123,7 +131,8 @@
             text-decoration: none;
             color: black;
             display: block;
-            padding: 20px 0px;
+            /* padding: 20px 0px; */
+            padding-bottom: 10px;
             font-size: 14px;
         }
 
@@ -137,7 +146,7 @@
 
 <body>
     <div class="main">
-        <div class="box">
+        <div class="box hidden">
             <img src="screenshot1.png" alt="">
         </div>
 

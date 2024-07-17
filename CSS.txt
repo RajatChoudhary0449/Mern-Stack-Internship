@@ -6,7 +6,6 @@
 Drawback of inline:
 -> Repetation of text
 -> Readability
--> 
 
 Types of selectors:
 1) class Selector
@@ -29,3 +28,28 @@ display and position:
             align-items:center;//will put the horizontal and vertical space same
         }
 flex_wrap:wrap; //will set the amount of containers in one line
+
+For different playscreen we can use media query:
+@media(max-width:680){
+	//style.css
+}
+
+Positions in CSS:
+1) static(default)
+2) relative
+3) absolute
+4) fixed
+5) stickey
+
+2) relative:
+It is used to set the position relative with itself. It can be used to put a specific push to a certain element. We can put top instead of margin-top and so on.
+
+3) Absolute:
+It eliminate space provided to it. And it overwrite its right portion. Since it left its position it will move relative to its parent.
+Note that the position of the parent must also be either relative or absolute.
+
+4) Fixed:
+Works similar to the absolute but It will be fixed to the screen while motion of the screen.
+
+5) Stickey:
+Works similar to fixed but in this it will stick only when we scroll it to 0 top and then sticks to the top.
