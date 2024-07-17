@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        div {
+            /* background-color: green; */
+            margin: 10px;
+        }
+
+        .box {
+            width: 400px;
+            min-width: 300px;
+            height: 80vh;
+            display: inline-block;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .secbox {}
+
+        .main {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: flex;
+            /* background-color: red; */
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        input {
+            width: 80%;
+            margin: 10px auto;
+            padding: 10px;
+            background-color: rgb(245, 245, 245);
+            border: grey;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 18px;
+            display: block;
+        }
+
+        i {
+            margin: 30px
+        }
+
+        button {
+            background-color: rgb(76, 181, 249);
+            /* align-items: center;
+            display: block; */
+            margin: 10px;
+            padding: 10px;
+            color: white;
+            font-family: sans-serif;
+            font-size: 12px;
+            text-align: center;
+            width: 80%;
+            font-weight: bold;
+            border-radius: 5px;
+            border: none;
+        }
+
+        hr {
+            display: inline;
+        }
+
+        p {
+            margin: 10px;
+            font-size: 12px;
+        }
+
+        i {
+            margin: 5px;
+            padding: 5px;
+        }
+
+        .first {
+            border: 1px solid rgb(219, 219, 219);
+            padding: 20px;
+            height: 68%;
+        }
+
+        .second {
+            border: 1px solid rgb(219, 219, 219);
+            /* height: 15%; */
+            padding: 10px;
+        }
+
+        .fb {
+            text-decoration: none;
+            color: rgb(56, 81, 133);
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .sec {
+            font-size: 16px;
+            font-weight: normal;
+        }
+
+        .third {
+            text-align: center;
+        }
+
+        .none {
+            text-decoration: none;
+            color: black;
+            display: block;
+            padding: 20px 0px;
+            font-size: 14px;
+        }
+
+        .get {
+            width: 70%;
+            padding: 10px;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="box">
+            <img src="screenshot1.png" alt="">
+        </div>
+
+        <div class="secbox box">
+            <div class="first">
+                <!-- <h1>Instagram</h1> -->
+                <i data-visualcompletion="css-img" aria-label="Instagram" role="img"
+                    style="background-image: url(&quot;https://static.cdninstagram.com/rsrc.php/v3/yM/r/8n91YnfPq0s.png&quot;); background-position: 0px -52px; background-size: auto; width: 175px; height: 51px; background-repeat: no-repeat; display: inline-block;"></i>
+                <input type="text" placeholder="Phone number, username, or email">
+                <input type="password" placeholder="Password">
+                <button>Log in</button>
+                <br>
+                <p>OR</p>
+                <i class="fa-brands fa-square-facebook"></i>
+                <a href="https://www.facebook.com/" class="fb"><span>Log in with Facebook</span></a>
+                <a href="https://www.facebook.com/" class="none"><span>Forgot Password?</span></a>
+            </div>
+            <div class="second">
+                <p class="sec">Don't have an account? <span style="color:rgb(0,149,246);">Sign up</span></p>
+            </div>
+            <div class="third">
+                <span style="font-weight: normal;">Get the app.</span>
+                <br>
+                <img src="screenshot2.png" alt="" class="get">
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
