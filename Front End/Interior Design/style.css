@@ -1,0 +1,183 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: poppins, sans-serif;
+}
+
+div {
+    display: inline-block;
+}
+
+.main {
+    width: 100%;
+}
+
+.left {
+    width: 20%;
+    height: 100vh;
+    position: fixed;
+    padding: 20px;
+    background-color: rgb(244, 67, 54);
+}
+
+.right {
+    width: 80%;
+    margin-left: 20%;
+    padding: 100px 45px;
+}
+
+.top {
+    width: 100%;
+    height: 10vh;
+    display: none;
+    background-color: rgb(244, 67, 54);
+}
+
+.above {
+    font-size: 22px;
+    color: white;
+    font-weight: bold;
+    font-family: poppins, sans-serif;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    padding: auto 20px;
+    display: block;
+}
+
+.below {
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    font-family: poppins, sans-serif;
+    line-height: 30px;
+}
+
+.below a {
+    color: white;
+    display: block;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: poppins, sans-serif;
+    padding: 5px;
+    text-decoration: none;
+}
+
+.right h1 b {
+    font-size: 64px;
+}
+
+.right .block {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    line-height: 1.5;
+}
+
+.right .block h1 {
+    color: #f44336;
+    font-size: 48px;
+    font-weight: 800;
+    list-style: 1.5;
+}
+
+.right .block hr {
+    width: 50px;
+    margin: 20px 0px;
+    border: 5px solid red;
+    border-radius: 5px;
+}
+
+.right .block img {
+    width: 45%;
+    height: 40%;
+    margin: 16px 0px -6px;
+}
+
+.right .block p {
+    margin: 16px 0px;
+}
+
+.right .block .subblock {
+    width: 30%;
+    display: inline-block;
+    margin: 8px;
+    background-color: #f1f1f1;
+}
+
+.right .block .subblock .box1 {
+    width: 100%;
+    height: 40%;
+}
+
+.right .block .subblock .box1 img {
+    width: 100%;
+    height: 100%;
+    margin: 0px 0px;
+}
+
+.right .block .subblock .box2 {
+    width: 100%;
+    height: 60%;
+    padding: 10px 20px;
+}
+
+.bd {
+    color: grey;
+}
+
+.block .block1 ul {
+    list-style-type: none;
+}
+
+.block .block1 {
+    background-color: #f1f1f1;
+    width: 45%;
+    text-align: center;
+}
+
+.block .block1 li {
+    padding: 10px 5px;
+}
+
+.block .block1 button {
+    padding: 10px;
+    background-color: white;
+    border: none;
+}
+
+#contact input {
+    width: 100%;
+    padding: 10px 0px;
+}
+
+#contact button {
+    width: 100%;
+    text-align: center;
+    padding: 12px 24px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    margin: 20px 0px;
+}
+
+@media(max-width: 984px) {
+    .left {
+        display: none;
+    }
+
+    .top {
+        display: flex;
+        position: sticky;
+        top: 0;
+        align-items: center;
+    }
+
+    .right {
+        margin-left: 0%;
+        width: 100%;
+    }
+
+    .below {
+        color: white;
+    }
+}

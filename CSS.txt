@@ -53,3 +53,16 @@ Works similar to the absolute but It will be fixed to the screen while motion of
 
 5) Stickey:
 Works similar to fixed but in this it will stick only when we scroll it to 0 top and then sticks to the top.
+
+background can be used to set 
+background:url('car.jpg')
+background-size: percentage
+background-repeat:no-repeat
+background-positon: center
+background-attachment:fixed
+background: linear-gradient(degree,yellow,red)
+background:radial-gradient(degree,yellow,red)
+
+opacity:(0-1)
+
+overflow: hidden or scroll
