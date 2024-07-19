@@ -66,3 +66,25 @@ background:radial-gradient(degree,yellow,red)
 opacity:(0-1)
 
 overflow: hidden or scroll
+
+Animation:
+animation-name:can be used to give names
+animation-duration: can be used to give duration
+animation-iteration-count: can be used to specify quantity (infiniate)
+@keyframes name{
+	from{
+	}
+	to{
+	}
+}
+
+
+transition-property:properties;
+transition-duration:2 sec
+transition:all time
+transition-direction: alternate
+
+transform usually used on hover:
+transform:rotate(+/- 360deg)
+scale
+k-skew

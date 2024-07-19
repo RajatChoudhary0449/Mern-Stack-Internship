@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .box1,
+        .box2,
+        .box3,
+        .box4 {
+            height: 200px;
+            width: 200px;
+            border: 2px solid black;
+            animation-duration: 2s;
+            position: absolute;
+            animation-iteration-count: infinite;
+        }
+
+        .box1:hover,
+        .box2:hover,
+        .box3:hover,
+        .box4:hover {
+            transform: scale(2);
+        }
+
+        .box1 {
+            left: 0px;
+            top: 0px;
+            animation-name: b1;
+        }
+
+        /* 
+        .box1:hover {
+            width: 500px;
+        } */
+
+        .box2 {
+            right: 0px;
+            top: 0px;
+            animation-name: b1;
+        }
+
+        .box3 {
+            bottom: 0px;
+            left: 0px;
+            animation-name: b1;
+        }
+
+        .box4 {
+            bottom: 0px;
+            right: 0px;
+            animation-name: b1;
+        }
+
+        @keyframes b1 {
+            from {}
+
+            to {
+                top: 50%;
+                left: 50%;
+                right: 50%;
+                bottom: 50%;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+</body>
+
+</html>
