@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text">
+    <button class="push">Push</button>
+    <button class="pop">Pop</button>
+    <script>
+        let arr = [];
+        const push = document.querySelector(".push");
+        const pop = document.querySelector(".pop");
+        const field = document.querySelector("input");
+        push.addEventListener("click", function () {
+            if (!Number(field.value))
+                arr.push(field.value);
+            else arr.push(Number(field.value))
+            console.log(arr);
+        })
+        pop.addEventListener("click", function () {
+            if (arr.length) {
+                field.value = arr.pop();
+            }
+            else {
+                alert("Cannot pop");
+            }
+            console.log(arr);
+        })
+        /*
+            named function
+            annonymous function
+            expressional function
+            arrow function
+            anonymous arrow function
+            expressional arrow function
+            function constructor
+            function expression
+            function declaration
+            immediately invoked functional expressions
+            function expression with arguments
+
+            Difference between regular function, arrow function:
+            1) this:
+            reg: depends on how the function is called
+            arr: lexically inherited from scope
+
+            2) new:
+            reg: new context
+            arr: does not create new context
+
+            3) constructor:
+            reg: can be used
+            arr: cannot be used
+
+            4) hoisting:
+            reg: can be hoisted
+            arr: can not be hoisted
+
+            Note: if regular function is also expressional can not hoisted.
+            
+        */
+        function calculator(a, b, operation) {
+            console.log(operation(a, b));
+        }
+        function sum(a, b) { return a + b; }
+        calculator(3, 5, sum);
+        console.log(console.log("Abc"));
+    </script>
+</body>
+
+</html>
